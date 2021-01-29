@@ -1,0 +1,372 @@
+// OS-FORM
+.os-form {
+	.form-group {
+		margin-bottom: 3rem;
+		position: relative;
+
+		::placeholder {
+			/* Chrome, Firefox, Opera, Safari 10.1+ */
+			color: $color-best-3;
+			opacity: 1;
+			/* Firefox */
+		}
+
+		:-ms-input-placeholder {
+			/* Internet Explorer 10-11 */
+			color: $color-best-3;
+		}
+
+		::-ms-input-placeholder {
+			/* Microsoft Edge */
+			color: $color-best-3;
+		}
+
+		label {
+			font-size: 1.4rem;
+			font-weight: 700;
+			color: #323232;
+			position: absolute;
+			top: -1.3rem;
+			left: 1rem;
+			padding: 0 0.5rem;
+			background: #fff;
+		}
+
+		//.PrivateNotchedOutline-legendLabelled-3>span {
+		//    padding-right: 2rem;
+		//    padding-left: 1rem;
+		//}
+		fieldset legend span {
+			padding-right: 2rem !important;
+			padding-left: 1rem !important;
+		}
+	}
+
+	.MuiInputBase-root {
+		padding: 0 !important;
+		margin: 0 !important;
+		width: 100%;
+
+		&:hover,
+		&:focus {
+			fieldset {
+				border: none !important;
+			}
+
+			span {
+				background: #fff;
+				padding: 0 0.5rem;
+				display: inline-block;
+				font-size: 1.4rem;
+				font-family: "Nunito Sans", sans-serif;
+			}
+		}
+
+		.MuiInputBase-input {
+			padding: 0 1rem !important;
+		}
+
+		position: relative;
+		z-index: 500;
+
+		&::before {
+			content: "Destination";
+			position: absolute;
+			z-index: 600;
+			display: inline-block;
+			padding: 0 1rem;
+			background: #fff;
+			font-family: "Nunito Sans", sans-serif;
+
+			font-size: 1.4rem;
+			font-weight: 700;
+			color: #323232;
+			position: absolute;
+			top: -1.3rem;
+			left: 1rem;
+			padding: 0 1rem;
+			background: #fff;
+			line-height: 3rem;
+		}
+
+		fieldset {
+			border: none !important;
+			outline: none !important;
+		}
+
+		label {
+			display: none !important;
+		}
+	}
+
+	.MuiFormControl-root {
+		padding: 0;
+		margin: 0 !important;
+		position: relative;
+
+		.MuiFormLabel-root {
+			top: 0 !important;
+		}
+	}
+
+	.MuiAutocomplete-endAdornment {
+		svg.MuiSvgIcon-root {
+			display: none;
+		}
+	}
+
+	input {
+		width: 100%;
+		outline: none;
+		@include border-r-sm;
+		outline: none;
+		color: $color-tertiary-1;
+		font-size: 1.4rem;
+		border: 1px solid $color-best-3;
+
+		&:focus {
+			border-color: $color-primary-1;
+		}
+	}
+
+	.form-group-multiple {
+		display: flex;
+		justify-content: space-between;
+
+		.form-group {
+			width: 48%;
+			margin-bottom: 0;
+		}
+	}
+
+	// Applies only on Home Page
+
+	.form-group {
+		input {
+			height: 6rem;
+			padding: 0 1.5rem;
+		}
+		textarea {
+			min-height: 15rem;
+			width: 100%;
+			padding: 1rem;
+			@include border-r-sm;
+		}
+	}
+}
+
+// utl-form
+.utl-form {
+	.form-group-multiple {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 1rem;
+
+		.form-group {
+			width: 48%;
+		}
+	}
+
+	.form-group {
+		position: relative;
+		width: 100%;
+
+		label {
+			display: block;
+			margin-bottom: 1rem;
+			color: #585858;
+			font-size: 1.4rem;
+		}
+
+		input,
+		select {
+			height: 5rem;
+			border: 1px solid #d5d5d5;
+			@include border-r-sm;
+			padding: 0.5rem 1rem;
+			outline: none;
+			color: #707070;
+
+			&:focus {
+				border-color: $color-primary-2;
+			}
+		}
+
+		select {
+			width: 15rem;
+		}
+
+		input {
+			width: 100%;
+		}
+	}
+
+	// Input-Type-Radio
+	.form-group-multiple--radio {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		margin-bottom: 4rem;
+	}
+
+	.form-group--radio {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		width: auto !important;
+		margin-right: 2rem;
+
+		input {
+			width: 1.6rem !important;
+			height: 1.6rem !important;
+			margin-right: 1rem;
+		}
+
+		label {
+			line-height: initial !important;
+			margin: 0 !important;
+			margin-right: 1rem;
+		}
+	}
+}
+
+// Apply only inner page 'top-search-bar'
+.top-search-bar,
+.search-room-available {
+	.form-group {
+		position: relative;
+		margin-bottom: 1rem;
+
+		input {
+			height: 4.8rem !important;
+			border: 1px solid #cbc8ff;
+			@include border-r-sm;
+			outline: none !important;
+			padding: 0 1.5rem;
+			width: 100%;
+		}
+
+		label {
+			display: none !important;
+		}
+	}
+
+	.MuiFormControl-root {
+		margin: 0 !important;
+
+		.MuiInputBase-root {
+			padding: 0 !important;
+
+			.MuiInputBase-input {
+				padding: 0 1.5rem !important;
+				font-size: 1.4rem;
+			}
+
+			.MuiTouchRipple-root,
+			.MuiIconButton-label {
+				display: none !important;
+			}
+
+			fieldset {
+				display: none !important;
+			}
+		}
+	}
+}
+
+// Dropdown (Select)
+.os-form {
+}
+.form-group {
+	.dropdown.selection {
+		&.search {
+			color: #323232;
+			font-size: 1.4rem;
+			position: relative;
+			z-index: 900;
+			padding-left: 4rem;
+			font-weight: 600;
+			height: 6rem;
+			@include border-r-sm;
+			padding: 0 1.5rem !important;
+			box-shadow: none !important;
+			border: 1px solid #afafaf;
+			.dropdown.icon {
+				display: none;
+			}
+
+			&::before {
+				content: "Destination";
+				position: absolute;
+				z-index: 700;
+				background: #fff;
+				width: 10rem;
+				height: 1rem;
+				top: -7px;
+				padding: 0 0.5rem;
+				color: #323232;
+				font-size: 1.4rem;
+				font-weight: 700;
+				@include respond-mediaQuery(phone) {
+					top: -4px;
+				}
+			}
+		}
+		.menu {
+			&.transition {
+				top: 105%;
+				border-color: #dfdfdf !important;
+				box-shadow: 0 3px 6px rgba($color-least-1, 0.16) !important;
+				@include border-r-sm;
+				@include respond-mediaQuery(ipad-pro) {
+					//min-height: 15rem;
+					top: 115%;
+					max-height: 30rem;
+				}
+				.item {
+					padding: 1rem !important;
+					&:first-child {
+						border-top: 1px solid #dfdfdf;
+					}
+					span.text {
+						font-size: 1.4rem !important;
+						color: $color-least-1 !important;
+					}
+				}
+			}
+		}
+		&:focus {
+			border: 1px solid #426ed9 !important;
+			@include border-r-sm;
+			box-shadow: none !important;
+		}
+	}
+	.ui.active.dropdown.selection {
+		border: 1px solid #426ed9 !important;
+		box-shadow: none !important;
+		@include border-r-sm;
+		border-bottom-left-radius: 4px !important;
+		border-bottom-right-radius: 4px !important;
+		box-shadow: none !important;
+	}
+	.ui.search.dropdown > .text {
+		top: 50%;
+		left: 0;
+		@include transform-y-m50percent;
+	}
+}
+//}
+
+.top-search-bar {
+	.form-group {
+		.dropdown {
+			&.selection.search {
+				border: 1px solid #cbc8ff;
+				height: 4.8rem;
+				&::before {
+					display: none;
+				}
+			}
+		}
+	}
+}

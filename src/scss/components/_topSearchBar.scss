@@ -1,0 +1,9 @@
+.top-search-bar {
+	width: 100%;
+	background: $color-best-1;
+	@include box-shadow-sm;
+	margin-bottom: 3.5rem;
+	@include respond-mediaQuery(phone) {
+		padding: 2rem 0;
+	}
+}

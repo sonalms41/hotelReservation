@@ -1,0 +1,105 @@
+// TABLE
+
+.utl-table {
+	width: 100%;
+	.body-parent {
+		width: 100%;
+		padding: 0 2rem;
+	}
+
+	.table-child {
+		width: 100%;
+		&-sm {
+			width: 50%;
+		}
+		&-0 {
+			strong {
+				color: #404040;
+			}
+			span {
+				color: #4076dd;
+			}
+		}
+	}
+
+	&.utl-table-landing {
+		margin-bottom: 3rem;
+
+		.tr-parent {
+		}
+		.td-parent {
+			padding: 2rem 0;
+			width: 100%;
+			border-bottom: 1px dashed #c2c2c2;
+			&-lg {
+				width: 100%;
+			}
+		}
+
+		.td-book {
+			width: 28%;
+		}
+		.td-prop-img {
+			width: 20%;
+			padding-right: 3rem;
+			height: 15rem;
+
+			@include respond-mediaQuery(phone) {
+				width: 40%;
+			}
+		}
+		.td-detail {
+			width: 80%;
+			@include respond-mediaQuery(phone) {
+				width: 60%;
+			}
+		}
+	}
+
+	h3.prop-name {
+		color: #293340;
+		font-weight: 700;
+		font-size: 2.4rem;
+		margin-bottom: 0.7rem;
+	}
+	h4 {
+		color: #000000;
+		font-size: 1.6rem;
+		font-weight: 700;
+	}
+	.prop-binfo {
+		margin-bottom: 1rem;
+	}
+	.aminity {
+		color: #6c63ff;
+		font-weight: 600;
+	}
+	.utl-proptype {
+		margin-top: 0.7rem;
+	}
+
+	.td-book {
+		margin-bottom: 1.5rem;
+		.value {
+			color: #404040;
+			font-size: 1.4rem;
+			font-weight: 600;
+		}
+	}
+
+	.table-payment {
+		h4 {
+			margin-bottom: 2rem;
+		}
+		td {
+			color: #404040;
+			font-size: 1.4rem;
+			padding: 1rem 0;
+		}
+		tr.table-row-2 {
+			td {
+				border-bottom: 1px solid #c8c8c8;
+			}
+		}
+	}
+}

@@ -1,0 +1,73 @@
+//.MuiInputBase-root {
+//    padding: 0 !important;
+//    margin: 0 !important;
+//    width: 100%;
+
+//    &:hover,
+//    &:focus {
+//        fieldset {
+//            border: none !important;
+//        }
+
+//        span {
+//            background: #fff;
+//            padding: 0 0.5rem;
+//            display: inline-block;
+//            font-size: 1.4rem;
+//            font-family: "Nunito Sans", sans-serif;
+//        }
+//    }
+
+//    .MuiInputBase-input {
+//        padding: 0 1rem !important;
+//    }
+
+//    position: relative;
+//    z-index: 500;
+
+//    &::before {
+//        content: "Destination";
+//        position: absolute;
+//        z-index: 600;
+//        display: inline-block;
+//        padding: 0 1rem;
+//        background: #fff;
+//        font-family: "Nunito Sans", sans-serif;
+
+//        font-size: 1.4rem;
+//        font-weight: 700;
+//        color: #323232;
+//        position: absolute;
+//        top: -1.3rem;
+//        left: 1rem;
+//        padding: 0 1rem;
+//        background: #fff;
+//        line-height: 3rem;
+//    }
+
+//    fieldset {
+//        border: none !important;
+//        outline: none !important;
+
+//    }
+
+//    label {
+//        display: none !important;
+//    }
+//}
+
+//.MuiFormControl-root {
+//    padding: 0;
+//    margin: 0 !important;
+//    position: relative;
+
+//    .MuiFormLabel-root {
+//        top: 0 !important;
+//    }
+//}
+
+//.MuiAutocomplete-endAdornment {
+//    svg.MuiSvgIcon-root {
+//        display: none;
+//    }
+//}

@@ -1,0 +1,23 @@
+.width-auto {
+    width: auto;
+}
+
+.base-info {
+    svg {
+        margin-right: 0.5rem;
+    }
+
+    .rating {
+        color: #FFC800;
+        margin-right: 1.5rem;
+
+        svg {}
+    }
+
+    .location {
+        color: #AFAFAF;
+        font-size: 1.4rem;
+
+        svg {}
+    }
+}

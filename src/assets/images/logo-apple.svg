@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="122" height="35" viewBox="0 0 122 35">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#3a91ec"/>
+      <stop offset="1" stop-color="#426ed9"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_825" data-name="Group 825" transform="translate(-808 -18)">
+    <text id="Available_on_the" data-name="Available on the" transform="translate(848 29)" fill="#afafaf" font-size="9" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="0">AVAILABLE ON THE</tspan></text>
+    <text id="App_Store" data-name="App Store" transform="translate(847 47)" fill="#afafaf" font-size="17" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">App Store</tspan></text>
+    <path id="Icon_awesome-apple" data-name="Icon awesome-apple" d="M22.409,18.893a6.564,6.564,0,0,1,3.516-5.962,7.555,7.555,0,0,0-5.955-3.136c-2.5-.2-5.224,1.455-6.223,1.455-1.055,0-3.473-1.385-5.372-1.385C4.451,9.928.281,12.994.281,19.23A17.525,17.525,0,0,0,1.294,24.94c.9,2.58,4.148,8.909,7.538,8.8,1.772-.042,3.023-1.259,5.33-1.259,2.236,0,3.4,1.259,5.372,1.259,3.417-.049,6.356-5.8,7.214-8.388a6.97,6.97,0,0,1-4.338-6.462ZM18.429,7.348a6.622,6.622,0,0,0,1.688-5.1A7.456,7.456,0,0,0,15.342,4.7a6.726,6.726,0,0,0-1.8,5.055,5.905,5.905,0,0,0,4.887-2.412Z" transform="translate(807.719 15.75)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

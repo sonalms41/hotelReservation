@@ -1,0 +1,63 @@
+.submit-notification {
+    position: fixed;
+    z-index: 1000;
+    top: 2rem;
+    right: 0;
+    background: $color-secondary-1;
+    color: $color-best-1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 6rem;
+    width: 20rem;
+    padding: 0.5rem 1.5rem;
+    @include transition-delay-sm;
+
+    &.hide {
+        animation-name: animate-hide-notification;
+        animation-duration: 2s;
+        display: none;
+    }
+
+    &.show {
+        animation-name: animate-show-notification;
+        animation-duration: 2s;
+    }
+}
+
+
+@keyframes animate-show-notification {
+    0% {
+        display: block;
+        right: -100%;
+    }
+
+    50% {
+        opacity: 1;
+        display: block;
+        right: 0;
+    }
+
+    100% {
+        display: none;
+        opacity: 1;
+        right: 0;
+    }
+}
+
+@keyframes animate-hide-notification {
+    0% {
+        right: 0;
+    }
+
+    50% {
+        opacity: 1;
+        right: -30%;
+    }
+
+    100% {
+        display: none !important;
+        opacity: 0;
+        right: -100%;
+    }
+}

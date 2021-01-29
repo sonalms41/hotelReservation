@@ -1,0 +1,53 @@
+/*----------------------------
+*** MEDIA-QUERY 
+
+** Break points-
+* 0 - 600px: phone,
+* 600px - 769px : ipad,
+* 769px - 1040px: ipad-pro,
+* 1040px - 1280px : laptop,
+* 1280px > : large -screen 
+------------------------------
+*/
+
+@mixin respond-mediaQuery($breakpoint) {
+    @if $breakpoint==phone {
+        @media (max-width: 37.5em) {
+            @content;
+        }
+
+        //Screen Width <= 600px
+    }
+
+    @if $breakpoint==ipad {
+        @media (max-width: 49em) {
+            @content;
+        }
+
+        //Screen Width <= 769px
+    }
+
+    @if $breakpoint==ipad-pro {
+        @media (max-width: 65em) {
+            @content;
+        }
+
+        //Screen Width <= 1040px;
+    }
+
+    @if $breakpoint==laptop {
+        @media (max-width: 80em) {
+            @content;
+        }
+
+        //Screen Width <= 1280px
+    }
+
+    @if $breakpoint==big-screen {
+        @media (min-width: 80em) {
+            @content;
+        }
+
+        //Screen Width > 1280px)
+    }
+}

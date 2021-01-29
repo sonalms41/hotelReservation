@@ -1,0 +1,4 @@
+// BOD-SHADOW
+@mixin box-shadow-sm {
+    box-shadow: 0 4px 4px rgba($color-least-1, 0.07);
+}

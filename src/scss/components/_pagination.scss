@@ -1,0 +1,49 @@
+.review-pagination {
+}
+.pagination-ul {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	li {
+		a {
+			width: 4rem;
+			height: 4rem;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			border-color: #dcdcdc;
+			border-style: solid;
+			border-top-width: 1px;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			border-left-width: 0;
+			padding: 0.5rem 0.7rem;
+			font-weight: bold;
+			color: $color-tertiary-3;
+			&:focus {
+				outline: none;
+			}
+		}
+
+		&.active,
+		&:hover {
+			a {
+				color: #6c63ff;
+				outline: none;
+			}
+		}
+		&:first-child {
+			a {
+				border-left-width: 1px;
+				width: auto;
+				font-weight: normal;
+			}
+		}
+		&:last-child {
+			a {
+				font-weight: normal;
+			}
+		}
+	}
+}

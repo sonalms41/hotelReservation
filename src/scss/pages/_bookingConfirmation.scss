@@ -1,0 +1,233 @@
+.booking-confirmaion {
+	.heading-tertiary {
+		margin-bottom: 3.5rem;
+	}
+
+	.confirmation-wrap {
+		background-color: #f5f7fb;
+		border: 1px solid #e2e2e2;
+		@include border-r-sm;
+
+		h4 {
+			font-size: 1.8rem;
+			font-weight: 700;
+			margin-bottom: 2rem;
+		}
+
+		.utl-col {
+			width: 25%;
+		}
+
+		.basic-info {
+			padding: 2rem;
+
+			p {
+				margin-bottom: 3rem;
+			}
+
+			.info-ul {
+				strong {
+					font-size: 1.6rem;
+					font-weight: 700;
+					color: $color-least-1;
+				}
+
+				li {
+					font-size: 1.4rem;
+					color: #707070;
+				}
+			}
+		}
+
+		.info-room {
+			margin-bottom: 1.5rem;
+			padding: 2rem;
+			background: #ebebeb;
+
+			th {
+				color: #707070;
+			}
+
+			td {
+				color: #323232;
+			}
+
+			table {
+				width: 100%;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.btn-wrapper {
+		margin-top: 2rem;
+
+		.utl-btn {
+			width: auto !important;
+			text-transform: none;
+		}
+	}
+	// PAYMENT-METHOD
+	.payment-options {
+		&__offline {
+			margin-bottom: 3rem;
+		}
+		&__esewa {
+		}
+		&__khalti {
+		}
+		.payment-item {
+			margin-bottom: 2rem;
+		}
+	}
+}
+
+// BOOKING-CONFIRMATIONO-DETAIL
+.booking-confirm-detail,
+.booking-cancel-detail {
+	.utl-btn-fifth {
+		width: 15.1rem;
+	}
+	.booking-cancel-detail__header {
+		h3 {
+			color: #f56a6a !important;
+		}
+	}
+
+	.booking-confirm-detail__header,
+	.booking-cancel-detail__header {
+		margin-top: 5rem;
+		margin-bottom: 3rem;
+
+		h3 {
+			color: #4076dd;
+			font-size: 2.4rem;
+			font-weight: 700;
+			margin-bottom: 2rem;
+		}
+
+		p {
+			font-size: 1.4rem;
+			color: #404040;
+		}
+	}
+}
+
+.booking-cancel-detail__body {
+	margin-bottom: 5rem;
+	.btn-wrap {
+		a {
+			padding-right: 2rem;
+		}
+	}
+}
+
+.booking-confirm-detail__body,
+.booking-cancel-detail__body {
+	border: 1px solid #c8c8c8;
+	padding-bottom: 2rem;
+	margin-bottom: 5rem;
+
+	.page-bottom {
+		padding: 0 3rem;
+	}
+}
+.btn-print {
+	button {
+		background: #55c779;
+		border: 1px solid #55c779;
+		font-size: 1.4rem;
+		text-align: center;
+		width: 15.1rem;
+		color: #fff;
+		outline: none !important;
+		padding: 1rem 2.5rem;
+		@include border-r-sm;
+
+		height: 4.7rem;
+		transition: all 0.2s;
+		@include transition-delay-sm;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		&:hover {
+			box-shadow: 0 5px 7px rgba(#000, 0.2);
+		}
+	}
+}
+
+// POPUP-MODAL
+.modal-popup {
+	&--paymentoptions {
+		@include respond-mediaQuery(phone) {
+			width: 100% !important;
+			right: 0;
+		}
+		.modal-epayment__img {
+			width: 50%;
+			margin-bottom: 2rem;
+		}
+		h3 {
+			text-align: center;
+			font-weight: 700;
+			font-size: 3rem;
+			margin-bottom: 2rem;
+		}
+		.modal-popup__close {
+			top: 1rem;
+			right: 1rem;
+		}
+		.modal-container {
+			padding: 4rem 3rem 3rem 3rem;
+			margin-top: 0;
+			width: 37rem;
+			position: absolute;
+			z-index: 2600;
+			top: 50%;
+			left: 50%;
+			@include transform-xy-m50percent;
+			@include respond-mediaQuery(phone) {
+				width: 95% !important;
+			}
+		}
+		.payment-options {
+			.item {
+				margin-bottom: 2rem;
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				input {
+					display: inline-block;
+					margin-right: 3rem;
+				}
+				label {
+					display: inline-block;
+					width: 18rem;
+					img {
+						width: 100%;
+					}
+					@include respond-mediaQuery(phone) {
+						width: 25rem;
+						font-size: 2.5rem;
+					}
+				}
+			}
+			&__offline {
+			}
+			&__esewa {
+			}
+			&__khalti {
+			}
+		}
+	}
+	&__body {
+	}
+}
+
+// CANCEL-CONFIRMATION-MODAL
+.cancel-bookingprocess {
+	color: #fff !important;
+}

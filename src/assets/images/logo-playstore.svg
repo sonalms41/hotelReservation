@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="134.812" height="33" viewBox="0 0 134.812 33">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#3a91ec"/>
+      <stop offset="1" stop-color="#426ed9"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_826" data-name="Group 826" transform="translate(-979.188 -20)">
+    <path id="Icon_awesome-google-play" data-name="Icon awesome-google-play" d="M19.356,13.728,6.425.762l16.452,9.445-3.521,3.521ZM3.05,0A2.277,2.277,0,0,0,1.779,2.068V27.925A2.278,2.278,0,0,0,3.05,29.993l15.035-15ZM27.963,13.218l-3.451-2L20.663,15l3.849,3.779,3.521-2A2.35,2.35,0,0,0,27.963,13.218ZM6.425,29.237l16.452-9.445-3.521-3.521Z" transform="translate(977.409 22)" fill="url(#linear-gradient)"/>
+    <text id="Get_it_on" data-name="Get it on" transform="translate(1013 29)" fill="#afafaf" font-size="9" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="0">GET IT ON</tspan></text>
+    <text id="Google_Play" data-name="Google Play" transform="translate(1013 47)" fill="#afafaf" font-size="17" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Google Play</tspan></text>
+  </g>
+</svg>

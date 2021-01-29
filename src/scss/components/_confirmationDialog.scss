@@ -1,0 +1,38 @@
+// ADMIN CONFIRMATION-DIALOG
+.admin-confirmation-dialog {
+    background-color: $color-addition-1;
+    @include border-r-sm;
+    padding: 1rem;
+    position: absolute;
+    min-width: 10rem;
+    display: flex;
+    height: auto;
+    flex-flow: column;
+    z-index: 600;
+    left: -15rem;
+
+    .confirmation-dialog-message {
+        margin-bottom: 1rem;
+    }
+
+    .confirmation-action-btns {
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+            @include border-r-sm;
+            padding: 0.6rem 1.5rem;
+            margin-left: 0.6rem;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .confirmation-action-yes {
+            background-color: $color-primary-1;
+            color: $color-best;
+        }
+
+        .confirmation-action-no {}
+    }
+}

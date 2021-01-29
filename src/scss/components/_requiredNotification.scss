@@ -1,0 +1,18 @@
+.required-notification {
+	background: #62c76d;
+	color: #fff;
+	z-index: 2000;
+	position: absolute;
+	left: 1rem;
+	top: 90%;
+	display: inline-block;
+	@include border-r-sm;
+	padding: 0.5rem 1rem;
+
+	&::before {
+		content: url("./../../assets/images/icon-arrow-drop-up.png");
+		position: absolute;
+		z-index: 1000;
+		top: -1.6rem;
+	}
+}

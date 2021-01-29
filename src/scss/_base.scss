@@ -1,0 +1,103 @@
+html {
+	/**
+    * size is measure in the basis of REMs, (pretty easier for responsive layout)
+    * default font size 16px = 100% (i.e 1rem = 16px)
+    * here default font size set to 62.5%, (i.e 1rem = 10px),
+    * this makes easier to calculate rem in the basis of 10px = 1rem,
+    * e.g 13px = (13/10)rem = 1.3rem  ( >> this is super easy then calcualte 13px = 13/16 = 0.8125rem )
+   	*/
+
+	font-size: 62.5; // 1rem = 10px; (100/16)*10 = 62.5%;
+	/* 1 */
+	-webkit-text-size-adjust: 62.5;
+	/* 2 */
+	-ms-text-size-adjust: 62.5;
+	/* 2 */
+	box-sizing: border-box;
+
+	// font size in differetn size of screen width
+	@include respond-mediaQuery(big-screen) {
+		font-size: 62.5%; // 1rem = 10px; (100/16)*10 = 62.5%;
+	}
+
+	@include respond-mediaQuery(laptop) {
+		font-size: 56.25%; // 1rem = 9px; (100/16)*9= 56.25%;
+	}
+
+	@include respond-mediaQuery(ipad-pro) {
+		font-size: 46.88%; // 1rem = 7.5px; (100/16)*7= 43.75%;
+	}
+
+	@include respond-mediaQuery(ipad) {
+		font-size: 43.75%; // 1rem = 7px; (100/16)*7= 43.75%;
+	}
+
+	@include respond-mediaQuery(phone) {
+		font-size: 40%; // 1rem = 6.4px; (100/16)*6.4= 40%;
+	}
+
+	//scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Nunito Sans", sans-serif !important;
+	font-weight: 400;
+	font-size: 1.4rem;
+	line-height: 2.5rem;
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after,
+body,
+html {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+
+	margin: 0;
+	padding: 0;
+}
+
+/* Remove default padding */
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class],
+* {
+	padding: 0;
+	list-style: none;
+}
+
+img {
+	width: auto;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+a,
+button {
+	cursor: pointer;
+	outline: none;
+}
+table {
+	border-collapse: collapse;
+	width: 100%;
+	th,
+	td {
+		text-align: left;
+		vertical-align: top;
+	}
+}
+h1,
+h2,
+h3 {
+	margin: 0;
+	font-family: inherit;
+}

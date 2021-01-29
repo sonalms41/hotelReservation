@@ -1,0 +1,61 @@
+// Anchor-tag
+.anchor-primary{
+	cursor: pointer;
+	&:hover{
+		color: #6c63ff !important;
+	}
+}
+.anchor-tag {
+	color: $color-tertiary-1;
+	font-size: 1.8rem;
+	padding-right: 2rem;
+	border-bottom: 1px solid $color-secondary-1;
+
+	display: inline-block;
+	position: relative;
+	z-index: 500;
+	&::before {
+		position: absolute;
+		content: url("./../../assets/images/icon-arrow-forward-sm.svg");
+		z-index: 600;
+		right: 0;
+		top: 50%;
+		@include transform-y-m50percent;
+	}
+
+	&:hover {
+		color: $color-secondary-2;
+	}
+}
+
+.a-underline {
+	text-decoration: underline !important;
+}
+// Anchor-tag overlay
+.anchor-tag-overlay {
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-indent: -9999px;
+	z-index: 1000;
+	cursor: pointer;
+}
+
+.a-cancel {
+	color: #f56a6a;
+	padding-right: 2rem;
+	cursor: pointer;
+}
+.utl-anchor {
+	font-size: 1.6rem;
+	color: $color-primary-2;
+	font-weight: 600;
+	display: block;
+	cursor: pointer;
+	&:hover {
+		text-decoration: underline;
+	}
+}

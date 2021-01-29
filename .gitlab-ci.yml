@@ -1,0 +1,32 @@
+stages:
+  - build
+  - deploymentTest
+  - product
+before_script:
+  - apt-get update -qq && apt-get install -y -qq sshpass rsync
+build:
+  stage: build
+  image: alpine
+  before_script:
+    - apk add zip
+  only:
+    - hotelreservation
+  script:
+    - echo "Building"
+    - zip -r build.zip build
+  artifacts:
+    paths:
+      - build.zip
+deploymentTest:
+  image: node:12
+  stage: deploymentTest
+  only:
+    - hotelreservation
+  script:
+    - echo "testing"
+    - sshpass -V
+    - export SSHPASS=C0nn3ct
+    - sshpass -e scp -P 2017 -o StrictHostKeyChecking=no build.zip cn@103.198.9.71:~/bookingPortal
+    - sshpass -e ssh -p2017 -o StrictHostKeyChecking=no cn@103.198.9.71 "cd bookingPortal; rm -r build; unzip build.zip"
+    - exit
+    - echo "Launch Complete"

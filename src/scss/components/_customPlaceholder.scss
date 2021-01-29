@@ -1,0 +1,49 @@
+.p-cover-lg {
+    .ui.card {
+        margin: 0 !important;
+        box-shadow: none;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+        overflow: hidden;
+        height: 51rem;
+
+        .placeholder {
+            max-width: 100%;
+        }
+
+        .content {
+            padding: 0 !important;
+        }
+    }
+
+
+}
+
+.p-cover-sm {
+    margin-bottom: 1rem;
+
+    .ui.card {
+        margin: 0 !important;
+        box-shadow: none;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+        overflow: hidden;
+        height: 25rem;
+
+        .placeholder {
+            max-width: 100%;
+        }
+
+        .content {
+            padding: 0 !important;
+        }
+    }
+
+
+}

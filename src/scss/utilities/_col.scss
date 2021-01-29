@@ -1,0 +1,126 @@
+/****************************
+    COL-WRAPPER
+*****************************/
+.col-wrapper {
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-left: -1.5rem;
+	margin-right: -1.5rem;
+
+	// Screen width <= Phone
+	@include respond-mediaQuery(phone) {
+		margin: 0;
+		width: 100%;
+	}
+}
+
+/******************************
+    COL-ITEM
+*******************************/
+
+.col-item {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+// segement column into 12 sector
+// apply column class name based on BEM naming convention (modifier of .col-item)
+
+.col-item--lg-1 {
+	width: 8.33333%;
+}
+
+.col-item--lg-2 {
+	width: 16.66666%;
+}
+
+.col-item--lg-3 {
+	width: 25%;
+}
+
+.col-item--lg-4 {
+	width: 33.33333%;
+}
+
+.col-item--lg-5 {
+	width: 41.66666%;
+}
+
+.col-item--lg-6 {
+	width: 50%;
+}
+
+.col-item--lg-7 {
+	width: 58.33333%;
+}
+
+.col-item--lg-8 {
+	width: 66.66666%;
+}
+
+.col-item--lg-9 {
+	width: 75%;
+}
+
+.col-item--lg-10 {
+	width: 83.333333%;
+}
+
+// RESPONSIVE LAYOUT
+.col-item,
+.col-item--lg-1,
+.col-item--lg-2,
+.col-item--lg-3,
+.col-item--lg-4,
+.col-item--lg-5,
+.col-item--lg-6 {
+	// On screen width <=Ipad
+	@include respond-mediaQuery(ipad) {
+		width: 50%;
+	}
+
+	// On screen width <=Phone
+	@include respond-mediaQuery(phone) {
+		width: 100%;
+		padding: 0;
+	}
+}
+
+.col-sm-box-1 {
+	height: 5.4rem;
+	@include border-r-sm;
+	padding: 0 2rem;
+	background: #f1f1ff;
+	border: 1px solid #dcdee1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: $color-primary-2;
+	font-size: 1.6rem;
+	font-weight: 700;
+}
+
+.col-sm-box-2 {
+	height: 4.5rem;
+	@include border-r-sm;
+	padding: 0 2rem;
+	background: $color-primary-2;
+	border: 1px solid #dcdee1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: $color-best-1;
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+
+.col-inline-bg {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	@include border-r-sm;
+	background-position: center;
+	display: inline-block;
+}

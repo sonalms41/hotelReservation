@@ -1,0 +1,90 @@
+.confirm-cancel-booking {
+	width: 43.5rem;
+	display: inline-block;
+	padding: 2rem;
+	@include border-r-sm;
+	background: #fff;
+	margin: auto;
+	position: absolute;
+	@include transform-xy-m50percent;
+	left: 50%;
+	top: 50%;
+	outline: none;
+
+	h3 {
+		font-size: 1.8rem;
+		color: #000000;
+		font-weight: 700;
+		margin-bottom: 1.5rem;
+	}
+
+	.form-group {
+		display: flex;
+		flex-flow: row-reverse;
+		justify-content: space-between;
+		margin: 0;
+		&:last-child {
+			margin-bottom: 3rem;
+		}
+	}
+	.btn-close-modal {
+		cursor: pointer;
+	}
+	.btn-cancel-confirm {
+		margin-top: 3rem;
+	}
+
+	.form-group {
+		input {
+			display: none;
+		}
+		label {
+			cursor: pointer;
+			color: #111111;
+			height: 5.3rem;
+			line-height: 5rem;
+			flex: 1;
+			margin-bottom: 0;
+			position: relative;
+			border-bottom: 1px solid rgba(#000000, 0.2);
+			&::before {
+				content: "";
+				position: absolute;
+				height: 1.8rem;
+				width: 1.8rem;
+				border: 1px solid rgba($color-least-1, 0.16);
+				right: 0;
+				top: 50%;
+				@include border-r-sm;
+				@include transform-y-m50percent;
+			}
+		}
+		input:checked ~ label {
+			&::after {
+				position: absolute;
+				top: 50%;
+				right: 2px;
+				content: url("./../../assets/images/icon-checkRed.png");
+				@include transform-y-m50percent;
+			}
+		}
+
+		input {
+			width: 2rem;
+		}
+			textarea{
+				min-height: 15rem;
+				width: 100%;
+				padding: 1rem;
+				margin-top: 1rem;
+				border: 1px solid rgba(0, 0, 0, 0.2);
+				@include border-r-sm;
+				outline: none;
+
+				&:focus{
+					border: 1px solid #6c63ff;
+				}
+			}
+		
+	}
+}

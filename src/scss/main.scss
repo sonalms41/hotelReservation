@@ -1,0 +1,45 @@
+/********************************
+    IMPORT PARTIAL SCSS: 
+*********************************/
+
+// VARIABLES
+@import "./variables";
+
+//MIXINS
+@import "./mixins/borderRadius", "./mixins/mediaQuery", "./mixins/transform",
+	"./mixins/transitionDelay", "./mixins/boxShadow";
+
+// BASE
+@import "./base";
+
+// FONTS
+@import "./fonts/iconFont";
+// COMPONENTS
+@import "./components/bookingCancelModule", "./components/customLoader",
+	"./components/customPlaceholder", "./components/dateRangePicker",
+	"./components/khalti", "./components/mapBox",
+	"./components/modalEntrySearchGuest", "./components/photoGallery",
+	"./components/requiredNotification", "./components/topSearchBar",
+	"./components/modalPopUp", "./components/review", "./components/pagination",
+	"./components/confirmationDialog", "./components/selectDestination";
+
+// PAGES
+@import "./pages/bookingConfirmation", "./pages/bookingEntry",
+	"./pages/propertyDetail", "./pages/landing", "./pages/login",
+	"./pages/profile", "./pages/search", "./pages/pageNotFound",
+	"./pages/pageHeader", "./pages/pageFooter";
+
+// UTILITIES
+@import "./utilities/anchorTag", "./utilities/autoSelect", "./utilities/button",
+	"./utilities/classCommon", "./utilities/col", "./utilities/container",
+	"./utilities/flex", "./utilities/formField", "./utilities/heading",
+	"./utilities/margin", "./utilities/padding", "./utilities/pseuutoClass",
+	"./utilities/submitNotification", "./utilities/textAlignment",
+	"./utilities/utl", "./utilities/border", "./utilities/width",
+	"./utilities/borderRadius", "./utilities/fontSize";
+
+// COMMON-STYLE PROPERTY
+@import "./commonStyleProperty/commonStyleProperty";
+
+// FOR-"react-image-gallery"
+@import "~react-image-gallery/styles/scss/image-gallery.scss";

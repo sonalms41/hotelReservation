@@ -1,0 +1,121 @@
+.modal-popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(#000000, 0.9);
+	z-index: 2500;
+	overflow-y: scroll;
+	//display: flex;
+	//align-items: center;
+	//justify-content: center;
+
+	.modal-container {
+		width: 70%;
+		background-color: $color-best-1;
+		@include border-r-sm;
+		margin: 3rem auto 5rem;
+		position: relative;
+
+		@include respond-mediaQuery(phone) {
+			width: 100%;
+			margin: auto;
+			padding: 2rem;
+
+			margin-bottom: 4rem;
+		}
+	}
+	.modal-popup__close {
+		position: absolute;
+		right: 1.5rem;
+		top: 2rem;
+		font-size: 2rem;
+		cursor: pointer;
+		color: #6c63ff;
+		font-weight: bold;
+		width: 3rem;
+		height: 3rem;
+		z-index: 9000;
+		&:hover {
+			color: #1fb485;
+		}
+		@include respond-mediaQuery(phone) {
+			top: 1rem;
+			right: 1rem;
+		}
+	}
+	tbody.body-parent {
+		padding: 0 !important;
+	}
+
+	// LOGIN
+	&--login {
+		.logo {
+			padding: 3rem 10rem;
+		}
+		.modal-popup__body {
+		}
+		.modal-container {
+			width: 38rem;
+			top: 50%;
+			@include transform-y-m50percent;
+			@include respond-mediaQuery(phone) {
+				width: 95% !important;
+			}
+		}
+		.login__wrapper {
+			background-image: none !important;
+			background: none !important;
+			overflow: hidden !important;
+			min-height: auto;
+		}
+		.login__social-media {
+			button {
+				width: 100% !important;
+			}
+			button > div {
+				margin: 0;
+				padding: 0 !important;
+			}
+		}
+		.login-content {
+			padding: 4rem;
+			width: 100%;
+			@include respond-mediaQuery(phone) {
+				height: auto !important;
+			}
+		}
+		.login__ui {
+			padding: 0;
+			margin: 0 !important;
+		}
+	}
+
+	// VIEW-MAP
+
+	.modal-epayment {
+		padding: 3rem;
+		width: 40%;
+		position: absolute;
+		z-index: 2000;
+		top: 50%;
+		left: 50%;
+		margin: 0;
+		@include transform-xy-m50percent;
+		&__img {
+			width: 35%;
+			margin: auto;
+			img {
+				width: 100%;
+			}
+		}
+		&__btn {
+			strong {
+				display: inline-block;
+				margin: 0 0.5rem;
+				font-weight: bold;
+			}
+		}
+	}
+}

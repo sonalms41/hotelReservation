@@ -1,0 +1,1038 @@
+// PROPERTY-DETAIL
+.prop-detail-page {
+	#prp-detail-overview {
+		width: 100%;
+	}
+
+	a.utl-anchor {
+		margin-top: 1.5rem;
+	}
+
+	.prop-detail-row {
+		margin-bottom: 8rem;
+		overflow: hidden;
+	}
+
+	.prop-detail-info-bar {
+		margin-bottom: 2rem;
+		@include respond-mediaQuery(phone) {
+			flex-flow: column;
+			align-items: flex-start;
+			.utl-col-1 {
+				width: 100% !important;
+				padding: 0;
+				margin: 0 0 1rem 0;
+			}
+		}
+		.utl-col-1 {
+			width: 40%;
+			h3.hotel-title {
+				a {
+					color: $color-tertiary-6;
+				}
+			}
+			.hotel-star,
+			.hotel-address,
+			.hotel-location-map {
+				line-height: initial;
+				display: flex;
+				align-items: center;
+			}
+			.hotel-star {
+				margin-right: 1rem;
+				color: $color-least-2;
+				line-height: initial;
+				img {
+					margin-right: 0.5rem;
+				}
+			}
+
+			.hotel-address {
+				color: $color-best-3;
+
+				img {
+					margin-right: 1rem !important;
+				}
+
+				margin-right: 1rem;
+			}
+
+			.hotel-location-map {
+				span {
+					color: $color-primary-2;
+					cursor: pointer;
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+
+		.utl-col-2 {
+			width: 60%;
+			@include respond-mediaQuery(phone) {
+				width: 100%;
+			}
+			.review {
+				width: 30rem;
+				@include respond-mediaQuery(phone) {
+					width: auto;
+				}
+				span {
+					display: inline-flex;
+				}
+
+				margin-right: 2rem;
+
+				&__total-review {
+					margin-right: 1.5rem;
+					color: $color-best-3;
+					text-decoration: underline;
+				}
+
+				&__total-rating {
+				}
+			}
+
+			.utl-btn-tertiary {
+				margin-right: 2rem;
+				&.btn-save-hotel {
+					span {
+						display: inline-flex;
+						align-items: center;
+						justify-content: center;
+						&::before {
+							content: url("./../../assets/images/icon-heartBorder.png");
+							line-height: 0;
+							padding-right: 1rem;
+						}
+					}
+					span.saved {
+						&::before {
+							content: url("./../../assets/images/icon-heartFull.png");
+							line-height: 0;
+						}
+					}
+				}
+			}
+
+			.utl-btn-fifth {
+				width: auto;
+			}
+		}
+	}
+}
+
+// Hotel-detail-nav
+.prop-detail-page {
+	.prop-detail-nav {
+		border: 1px solid $color-best-6;
+		background: $color-best-8;
+		margin-bottom: 1rem;
+		@include transition-delay-sm;
+		@include respond-mediaQuery(phone) {
+			display: none !important;
+		}
+		&.prop-detail-nav--sticky {
+			position: fixed;
+			z-index: 2100;
+			top: 0;
+			left: 0;
+			width: 100%;
+			box-shadow: 0 4px 4px rgba(0, 0, 0, 0.07);
+
+			@include transition-delay-sm;
+
+			.prop-detail-nav__ul {
+				max-width: 135rem;
+				margin: 0 auto;
+
+				li a {
+					padding: 2rem 0;
+				}
+			}
+		}
+
+		li {
+			padding: 0 2rem;
+
+			a {
+				color: $color-best-3;
+				font-size: 1.6rem;
+				font-weight: 600;
+				padding: 1rem;
+				display: inline-block;
+				z-index: 500;
+				position: relative;
+			}
+
+			a.active,
+			a:hover {
+				color: $color-secondary-1;
+
+				&::before {
+					content: "";
+					position: absolute;
+					width: 100%;
+					height: 3px;
+					background: $color-secondary-1;
+					bottom: -0.1rem;
+					left: 0;
+					z-index: 600;
+				}
+			}
+		}
+	}
+}
+
+// Poto-gallery
+.prop-detail-page {
+	.prop-photo-gallery {
+		position: relative;
+		z-index: 600;
+		display: flex;
+		margin-bottom: 2.5rem;
+
+		.photo-expo {
+			background-size: cover;
+			background-position: center;
+			height: 100%;
+			width: 100%;
+			cursor: pointer;
+		}
+
+		img {
+			width: 100%;
+			cursor: pointer;
+			@include transition-delay-sm;
+			position: relative;
+			z-index: 500;
+		}
+
+		.gallery-col-1 {
+			width: 50%;
+			padding-right: 1rem;
+			padding-bottom: 1rem;
+			position: relative;
+			z-index: 500;
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		.gallery-col-2 {
+			width: 51%;
+			margin-right: -1rem;
+		}
+
+		.photo-list-ul {
+			display: flex;
+			flex-flow: row wrap;
+			width: 100%;
+
+			li.photo-item {
+				width: 50%;
+				padding: 0 1rem 1rem 0;
+				position: relative;
+				z-index: 500;
+				cursor: pointer;
+				@include transition-delay-sm;
+				height: 25rem;
+				@include respond-mediaQuery(phone) {
+					height: 12rem;
+				}
+
+				//&:hover::before {
+				//	content: "";
+				//	position: absolute;
+				//	z-index: 600;
+				//	background: rgba($color-least-1, 0.3);
+				//	top: 0;
+				//	left: 0;
+				//	right: 0;
+				//	bottom: 0;
+				//	@include transition-delay-sm;
+				//}
+			}
+		}
+
+		.overlay-rest-photo-no {
+			position: absolute;
+			z-index: 1000;
+			right: 2rem;
+			bottom: 3rem;
+			background: rgba($color-tertiary-1, 0.85);
+			@include border-r-sm;
+			height: 4.8rem;
+			padding: 0 1.5rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: 700;
+			font-size: 1.7rem;
+			color: $color-best-1;
+			@include respond-mediaQuery(phone) {
+				height: 3.8rem;
+			}
+			.icon-img-no {
+				margin-right: 1rem;
+
+				img {
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}
+
+// Detail-general
+.prop-detail-page {
+	.prop-detail-general {
+		h4 {
+			color: $color-tertiary-6;
+			font-size: 2rem;
+			font-weight: 700;
+			margin-bottom: 2.8rem;
+			line-break: initial;
+		}
+
+		p {
+			color: $color-tertiary-1;
+			font-size: 1.6rem;
+			line-break: 3rem;
+			margin-bottom: 1.5rem;
+		}
+
+		.col-item {
+			.utl-col {
+				padding: 2.5rem;
+				@include border-r-sm;
+				border: 1px solid #dcdee1;
+				min-height: 29rem;
+				@include respond-mediaQuery(phone) {
+					min-height: 15rem;
+					margin-bottom: 2rem;
+				}
+			}
+
+			.prop-description {
+			}
+
+			.prop-check-time {
+				.col-sm-box-1 {
+					padding: 0 1.2rem;
+				}
+
+				span {
+					font-size: 1.6rem;
+					font-weight: 700;
+
+					&.txt {
+						color: $color-primary-2;
+						text-transform: uppercase;
+					}
+				}
+
+				.checkin-end,
+				.checkin-end {
+				}
+
+				.utl-row {
+					margin-bottom: 2rem;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			.prop-map {
+				.utl-anchor {
+				}
+			}
+		}
+	}
+}
+
+// Poperty-detail-room
+.prop-detail-page {
+	.prop-detail-room {
+		overflow: visible;
+		.search-room-available {
+			margin-bottom: 3rem;
+			padding: 1.5rem 1.5rem 1rem 1.5rem;
+			border: 1px solid #efefef;
+			@include border-r-sm;
+		}
+
+		table.table-room-detail {
+			//border: 1px solid #e2e2e2;
+			background-color: #fcfcfc;
+			@include border-r-sm;
+			margin-bottom: 3rem;
+			position: relative;
+			width: 100%;
+			.table__header {
+				//@include respond-mediaQuery(phone) {
+				//	display: none;
+				//}
+				@include respond-mediaQuery(ipad) {
+					display: none !important;
+				}
+			}
+			.table__body {
+			}
+			.alt-room-title {
+				display: none !important;
+				font-weight: 700;
+				font-size: 1.8rem;
+				margin-bottom: 1rem;
+				//@include respond-mediaQuery(phone) {
+				//	display: block !important;
+				//}
+				@include respond-mediaQuery(ipad) {
+					display: block !important;
+				}
+			}
+			.sum-detail {
+				position: absolute;
+				z-index: 700;
+				width: 20rem;
+				top: 9rem;
+				right: 2rem;
+				padding-left: 3rem;
+				@include respond-mediaQuery(ipad) {
+					width: 100%;
+					position: fixed;
+					z-index: 2000;
+					left: 0 !important;
+					right: 0 !important;
+					bottom: 0 !important;
+					padding: 2rem 3rem;
+					background: #eee;
+					height: auto !important;
+					display: inline-block;
+					top: initial !important;
+				}
+
+				&.fixed {
+					position: fixed;
+				}
+
+				span,
+				.info {
+					font-size: 1.2rem;
+					color: #afafaf;
+				}
+				.n-rooms {
+					display: block;
+					font-weight: bold;
+					color: #222;
+				}
+				.n-guests {
+				}
+				.n-nights {
+				}
+				.tot-price {
+					font-size: 2.5rem;
+					margin: 0.5rem 0;
+					font-weight: 700;
+				}
+				.info {
+					margin-bottom: 1rem;
+				}
+			}
+			.selected-room {
+				.ui {
+					&.selection {
+						border: 1px solid $color-primary-2 !important;
+						color: $color-primary-2 !important;
+					}
+				}
+				i.dropdown {
+					color: $color-primary-2 !important;
+				}
+				.table-col-4 {
+					//border-top: 2px solid $color-primary-2  !important
+				}
+			}
+			thead {
+				width: 100%;
+
+				tr {
+					border: 1px solid $color-best-6;
+					background: $color-best-8;
+					@include border-r-sm;
+					width: 100%;
+				}
+
+				.table-col {
+					color: $color-tertiary-1;
+					font-size: 1.6rem;
+					font-weight: 700;
+					padding: 2rem;
+					text-align: left;
+				}
+			}
+
+			tbody {
+				.table-col {
+					&.table-col-5 {
+						@include respond-mediaQuery(ipad) {
+							display: none !important;
+						}
+						.td-visible-on-ss {
+							display: none !important;
+						}
+					}
+					&.table-td-0 {
+						.td-visible-on-ss {
+							display: block !important;
+						}
+					}
+				}
+			}
+
+			tr.table-row {
+				@include respond-mediaQuery(ipad) {
+					display: block;
+					width: 100%;
+					margin-bottom: 2rem;
+				}
+				&:last-child {
+					td.table-col-5 {
+						border-bottom: 1px solid #e2e2e2;
+					}
+				}
+			}
+
+			.table-col {
+				padding: 3rem 2rem;
+				border: 1px solid $color-best-6;
+				@include respond-mediaQuery(ipad) {
+					width: 100% !important;
+					display: block;
+				}
+
+				&-1 {
+					width: 25%;
+				}
+
+				&-2 {
+					width: 25%;
+				}
+
+				&-3 {
+					width: 20%;
+				}
+
+				&-4 {
+					width: 10%;
+				}
+
+				&-5 {
+					width: 20%;
+					border-top: none;
+					border-bottom: none;
+				}
+			}
+
+			.table-col {
+				span {
+					display: inline-flex;
+
+					&.img {
+						width: 100%;
+						display: inline-block;
+						width: 100%;
+						height: 15rem;
+						background-size: cover;
+						@include border-r-sm;
+						@include respond-mediaQuery(ipad) {
+							height: 45rem;
+						}
+						@include respond-mediaQuery(phone) {
+							height: 15rem;
+						}
+					}
+				}
+
+				&.room-type {
+					.type {
+						font-size: 1.8rem;
+						line-height: 2rem;
+						font-weight: 700;
+						color: $color-primary-2;
+						margin-bottom: 2rem;
+					}
+
+					.img {
+					}
+
+					.room-capacity,
+					.bed-type {
+						color: $color-tertiary-2;
+						font-size: 1.4rem;
+						font-weight: 600;
+						width: 100%;
+
+						img {
+							margin-right: 0.7rem;
+						}
+
+						.area {
+							margin-right: 1rem;
+						}
+
+						margin-bottom: 0.5rem;
+					}
+
+					.bed-type {
+					}
+				}
+
+				&.amenities-facilities {
+					.services-wrapper {
+						.service {
+							display: inline-flex;
+							align-items: center;
+							justify-content: flex-start;
+							font-size: 1.6rem;
+							line-height: 2rem;
+							color: #585858;
+							font-weight: 500;
+							margin-bottom: 2rem;
+							padding-right: 2rem;
+
+							img {
+								margin-right: 0.7rem;
+							}
+
+							span {
+								line-height: initial;
+							}
+						}
+					}
+				}
+
+				&.including {
+					span.included,
+					span.not-included {
+						position: relative;
+						z-index: 500;
+						margin-bottom: 1.7rem;
+						color: $color-primary-2;
+						font-size: 1.4rem;
+						font-weight: 600;
+						display: flex;
+						width: 100%;
+						align-items: center;
+						justify-content: flex-start;
+
+						&::before {
+							height: 2rem;
+							width: 2rem;
+
+							height: 2.3rem;
+							width: 2.3rem;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							z-index: 700;
+							margin-right: 1.3rem;
+							@include border-r-lg;
+						}
+					}
+
+					span.included {
+						&::before {
+							content: url(./../../assets/images/icon-feature-check.svg);
+							background: $color-best-3;
+						}
+					}
+
+					span.not-included {
+						&::before {
+							content: "X";
+							color: #fff;
+							background: #dc3545;
+							//background: $color-best-3;
+						}
+					}
+				}
+
+				&.price {
+					span {
+						margin-bottom: 1rem;
+						display: inline-block;
+						width: 100%;
+						font-size: 1.2rem;
+					}
+
+					.price__off {
+						color: $color-primary-2;
+						text-decoration: line-through;
+						text-transform: uppercase;
+					}
+
+					.price__act {
+						font-weight: 700;
+						font-size: 2.8rem;
+						text-transform: uppercase;
+						margin-bottom: 0;
+					}
+
+					.price__info {
+						color: #afafaf;
+					}
+
+					.price__select {
+						span.no-rooms {
+							color: $color-primary-2;
+						}
+						span {
+							margin: 0;
+						}
+						.ui {
+							&.no-rooms {
+								border: 1px solid #dc3545 !important;
+								i.icon,
+								.default {
+									color: #dc3545 !important;
+								}
+								cursor: not-allowed;
+								opacity: 1;
+							}
+							&.selection {
+								border: 1px solid $color-secondary-1;
+								padding-top: 1.6rem;
+								padding-bottom: 1.6rem;
+								color: $color-secondary-1;
+								font-size: 1.4rem;
+
+								border-radius: 4px !important;
+								-webkit-border-radius: 4px !important;
+								-moz-border-radius: 4px !important;
+								-ms-border-radius: 4px !important;
+								-o-border-radius: 4px !important;
+
+								.item {
+									padding: 1.5rem 1rem !important;
+								}
+								.option {
+									display: flex;
+									align-items: center;
+									justify-content: flex-start;
+									span {
+										width: auto;
+									}
+									&__room {
+										width: 20% !important;
+									}
+									&__price {
+										width: 80% !important;
+										font-weight: bold;
+										display: none;
+										.curr {
+											padding-right: 0.5rem;
+										}
+										.amount {
+										}
+									}
+								}
+								i.dropdown {
+									color: $color-secondary-1;
+									font-size: 1.6rem;
+								}
+
+								.default {
+									color: $color-secondary-1;
+								}
+
+								.visible {
+									&.menu {
+										@include border-r-sm;
+										margin-top: 1rem;
+										border: 1px solid #e2e2e2;
+										.item {
+											.option {
+												justify-content: space-between;
+												&__price {
+													display: flex;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+				&.total-result {
+					font-size: 1.2rem;
+					font-weight: 500;
+					color: #afafaf;
+
+					span {
+						display: inline-block;
+						width: 100%;
+					}
+
+					.tot-room {
+					}
+
+					.tot-price {
+						font-size: 2.8rem;
+						font-weight: 700;
+						color: $color-least-1;
+					}
+
+					.info {
+						margin-bottom: 1.5rem;
+					}
+
+					.utl-btn {
+					}
+				}
+			}
+			.td_not-found {
+				border-bottom: 1px solid #e2e2e2;
+				padding: 2rem;
+				h1 {
+					color: #6c63ff;
+				}
+			}
+		}
+	}
+}
+
+// Poperty-detail-room
+.prop-detail-page {
+	.prop-detail-amenities {
+		table.table-amenities-detail {
+			background-color: #fcfcfc;
+			border: 1px solid #e2e2e2;
+
+			.table-col {
+				border: none;
+				padding: 2rem;
+				color: #585858;
+				font-size: 1.6rem;
+			}
+
+			thead {
+				tr {
+					th {
+					}
+				}
+			}
+			.amenities-tr {
+				@include respond-mediaQuery(phone) {
+					display: flex;
+					flex-flow: column;
+				}
+				.amenities-td {
+				}
+			}
+
+			.table-head {
+				@include respond-mediaQuery(phone) {
+					display: none !important;
+				}
+			}
+			.aminity-category {
+				border: none;
+				padding: 2rem;
+				color: #585858;
+				font-size: 1.6rem;
+				display: none;
+				&.visible-on-ss {
+					@include respond-mediaQuery(phone) {
+						display: block;
+						font-size: 2rem;
+						padding: 0;
+						margin-bottom: 2rem;
+						font-weight: 700;
+					}
+				}
+			}
+			.amenities {
+				display: flex;
+				align-items: center;
+				margin-bottom: 2rem;
+				width: 100%;
+
+				&__icon {
+					margin-right: 1.5rem;
+				}
+
+				&__title {
+				}
+			}
+		}
+	}
+}
+
+// Poperty-detail-room
+.prop-detail-page {
+	.prop-detail-policies {
+		color: color-tertiary-1;
+
+		.policy-col {
+			border: 1px solid $color-best-6;
+			@include border-r-sm;
+			padding: 2rem;
+			background: #fcfcfc;
+
+			@include respond-mediaQuery(phone) {
+				margin-bottom: 3rem;
+			}
+		}
+
+		.policy-row {
+			margin-bottom: 4rem;
+		}
+
+		.utl-col {
+			color: $color-primary-2;
+			font-size: 1.6rem;
+			font-weight: 700;
+
+			.txt {
+				padding: 0 1.5rem;
+			}
+		}
+
+		h4 {
+			color: $color-tertiary-1;
+			font-size: 2rem;
+			font-weight: 700;
+			margin-bottom: 1.5rem;
+		}
+
+		p {
+			font-size: 1.6rem;
+		}
+
+		.policy-ul {
+			margin-bottom: 4.5rem;
+		}
+	}
+}
+
+// Poperty-detail-room
+.prop-detail-page {
+	.prop-detail-review {
+		.review-wrapper {
+			border: 1px solid #e2e2e2;
+			@include border-r-sm;
+			padding: 2rem;
+			background-color: #fcfcfc;
+			margin-bottom: 4rem;
+		}
+
+		.review-graph {
+		}
+
+		.review-col-1 {
+			width: 40%;
+			padding-right: 7rem;
+
+			.review-chart {
+				&__status {
+					font-size: 1.2rem;
+					span {
+						color: #afafaf;
+					}
+					strong {
+						color: #4d4d4d;
+						font-weight: 700;
+					}
+				}
+				&__item,
+				&__progress {
+					height: 1.2rem;
+					@include border-r-md;
+				}
+				&__item {
+					display: block;
+					width: 100%;
+					background: #cfcfcf;
+					position: relative;
+					margin-bottom: 1rem;
+					@include border-r-md;
+				}
+				&__progress {
+					display: inline-block;
+					background: #55c779;
+					position: absolute;
+					@include border-r-md;
+				}
+			}
+
+			.col-sm-box-2 {
+				margin-right: 1rem;
+			}
+
+			.review-status {
+				font-size: 1.8rem;
+				font-weight: 700;
+				color: $color-tertiary-3;
+			}
+
+			.review-no {
+				color: $color-best-3;
+				font-size: 1.4rem;
+				text-decoration: underline;
+			}
+		}
+
+		.review-col-2 {
+			width: 60%;
+
+			.review-ul {
+				li {
+					margin-bottom: 2.4rem;
+					padding-bottom: 2.4rem;
+					border-bottom: 1px solid #dcdcdc;
+
+					//&:last-child {
+					//	border-bottom: none;
+					//	margin-bottom: 0;
+					//	padding-bottom: 0;
+					//}
+
+					p {
+						color: $color-tertiary-1;
+						font-size: 1.4rem;
+						line-height: 2.9rem;
+					}
+
+					.utl-row {
+						margin-bottom: 1.5rem;
+					}
+
+					.review-date {
+						color: $color-tertiary-2;
+						font-weight: 1.4rem;
+					}
+
+					.review-name {
+						font-weight: 700;
+						font-size: 1.8rem;
+						color: $color-tertiary-3;
+					}
+
+					.review-address {
+						color: $color-best-3;
+						font-size: 1.4rem;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+/**************************
+    PAGE CONTAINER
+***************************/
+.container {
+	max-width: 135rem;
+	margin: 0 auto;
+	padding: 0 1.5rem;
+
+	@include respond-mediaQuery(laptop) {
+		max-width: 100%;
+		width: 100%;
+		padding: 0 5rem;
+	}
+	@include respond-mediaQuery(ipad) {
+		padding: 0 3rem;
+	}
+	&--min-height {
+		min-height: 90vh;
+	}
+}
